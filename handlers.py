@@ -1,3 +1,8 @@
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = update.effective_user.id
+    add_user(user_id)
+    await update.message.reply_text("👋 স্বাগতম! বাংলা রাশিফল জানতে /rashifol রাশি নাম লিখুন।")
+
 from telegram import Update
 from telegram.ext import ContextTypes
 from config import ADMIN_ID
