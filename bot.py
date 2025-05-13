@@ -1,3 +1,6 @@
+from handlers import start  # <--- ✅ This must be here
+app.add_handler(CommandHandler("start", start))
+
 from telegram.ext import ApplicationBuilder, CommandHandler
 from handlers import start, rashifol_command, broadcast, help_command
 from config import BOT_TOKEN
